@@ -24,7 +24,7 @@ as `x`, `y`, `z`, `psi`, `density`
 
 ## Generate Plot
 ```
-$ gnuplot plot.gn
+$ gnuplot -persist -e "dim=100" plot.gn
 ```
 this step requires installing `gnuplot` in my case on `linux` just use 
 ```
