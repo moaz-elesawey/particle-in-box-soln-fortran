@@ -13,20 +13,37 @@ subroutine initialize
 		! initialize z axis values
 		zs(i) = dz * float(i)
 		! initialize psi and psi2 axis values
-		psi(i) = 0.0
-		psi2(i) = 0.0
+		psi(:, i) = 0.0
+		psi2(:, i) = 0.0
 	end do
+
 	
+	zz = 0.0
 	! create the 2D grid
-	call meshgrid(xs, ys, nx, ny, xx, yy)
+	call meshgrid(xs, ys, ns, xx, yy)
 
 end subroutine initialize
 
-subroutine meshgrid(x, y, nx, ny, xx, yy)
-	integer, intent(in) :: nx, ny
-	real*8, dimension(nx), intent(in) :: x, y
-	real*8, dimension(1:nx, 1:ny), intent(out) :: xx, yy
+subroutine meshgrid(x, y, n, xx, yy)
+	! routine to create a grid from x and y arrays
+
+	integer, intent(in) :: n
+	real*8, dimension(n), intent(in) :: x, y
+	real*8, dimension(1:n, 1:n), intent(out) :: xx, yy
 
 	xx = spread(x, 1, size(y))
 	yy = spread(y, 2, size(x))
 end subroutine meshgrid
+
+subroutine print_mat2d(xx, n)
+	implicit none
+	real*8, dimension(1:n, 1:n), intent(in) :: xx
+	integer, intent(in) :: n
+	integer :: i
+
+	do i  = 1, n, 1
+		print *, xx(:, i)
+	end do
+
+end subroutine print_mat2d
+

@@ -32,7 +32,11 @@ $ sudo apt install gnuplot
 ```
 
 ## Example
-![Example Plot](output.png)
+### Wave Function
+![Example Plot Wave Function](PIB_wave_function.png)
+
+### Electron Density
+![Example Plot Electron Density](PIB_electron_density.png)
 
 
 ## Note

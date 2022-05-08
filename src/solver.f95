@@ -5,9 +5,12 @@ subroutine solve_stand
 	implicit none
 
 	! solve the wave function of the electron
-	psi = g * sin((nx * xs * pi) / a) &
-			* sin((ny * ys * pi) / b) &
-			* sin((nz * zs * pi) / c)
+	! psi = g * sin((nx * xs * pi) / a) &
+	! 		* sin((ny * ys * pi) / b) &
+	! 		* sin((nz * zs * pi) / c)
+
+	psi = g * sin((nx * xx * pi) / a) &
+			* sin((ny * yy * pi) / b)
 
 	! solving the electron density
 	psi2  = psi**2

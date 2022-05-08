@@ -6,12 +6,12 @@ module params
 	! nodes in the x direction
 	integer, parameter :: nx = 2
 	! nodes in the y direction
-	integer, parameter :: ny = 5
+	integer, parameter :: ny = 4
 	! nodes in the z direction
 	integer, parameter :: nz = 4
 
 	! number of points to work with
-	integer, parameter :: ns = 10000
+	integer, parameter :: ns = 100
 
 	! width of the box in the x direction
 	real, parameter :: a = 2.0
@@ -50,8 +50,8 @@ module variables
 	real*8, dimension(1:ns, 1:ns) :: xx, yy, zz
 
 	! wave function solution
-	real*8, dimension(1:ns) :: psi
+	real*8, dimension(1:ns, 1:ns) :: psi
 	! electron density
-	real*8, dimension(1:ns) :: psi2
+	real*8, dimension(1:ns, 1:ns) :: psi2
 
 end module variables
