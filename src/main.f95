@@ -1,13 +1,16 @@
 program main
-	implicit none
+   implicit none
 
-	! initialize variables
-	call initialize
+   ! initialize variables
+   print *, "initializing simulation variables... done!"
+   call initialize
 
-	! solve the wave function
-	call solve_stand
+   ! solve the wave function
+   print *, "solving schrodinger equation... done!"
+   call solve_scf
 
-	! save the data
-	call saver("data.dat")
+   ! save the data
+   print *, "saving simulation results... done!"
+   call saver
 
 end program main
