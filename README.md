@@ -28,9 +28,6 @@ which can be all found in `anaconda` distribution
 ### Wave Function
 ![Example Plot Wave Function](animation.gif)
 
-### Electron Density
-![Example Plot Electron Density](PIB_electron_density.png)
-
 
 ## Note
 You can change the parameters in the `src/parameters.f95` to change the environment of the box.
