@@ -24,8 +24,7 @@ Python will need the following packages to work
  3. netCDF4
 which can be all found in `anaconda` distribution
 
-## Example
-### Wave Function
+## Demo
 ![Example Plot Wave Function](animation.gif)
 
 
